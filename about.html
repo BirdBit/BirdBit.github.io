@@ -86,28 +86,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
+    text-align: left;
+    padding: 50px; /* Adjust the padding as needed */
 }
 
 .about-text {
-    width: 75%; /* Takes up the left 3/4 of the container */
-    padding-right: 2%; /* Optional padding for spacing */
-    /* Add any additional styling for the text section */
+    flex: 1; /* Takes up the remaining space */
+    padding-right: 2%; /* Creates some space between the text and the image */
 }
 
 .about-image {
-    width: 100%; /* The image takes up 100% of the container */
-    /* Ensure the image container's width doesn't exceed the image's intrinsic width */
+    flex: 0 0 25%; /* Do not grow, do not shrink, start at 25% of the parent's width */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end; /* Aligns the image to the right */
 }
 
 .about-image img {
-    width: 100%; /* Make the image expand to fill its container */
+    max-width: 100%; /* Ensure the image is responsive and doesn't exceed its container */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area without stretching the image */
 }
+
         
     </style>
 </head>
@@ -124,14 +122,17 @@
 
 <div class="about-section">
     <div class="about-text">
-        <h2>About Me</h2>
-        <p>Here is some information about me.</p>
-        <!-- Add more text or elements as needed -->
+        <!-- Your text content goes here -->
+        <h2>Jair Cortez</h2>
+        <p>I am a master's student who studies bioinformatics and birds.</p>
+        <!-- More text content -->
     </div>
     <div class="about-image">
-        <img src="Jair_Photo.JPG" alt="Portrait" />
+        <!-- Your image goes here -->
+        <img src="Jair_Photo.JPG" alt="Portrait of Jair" />
     </div>
 </div>
+
 
 
 <!-- Additional sections can be added here -->
