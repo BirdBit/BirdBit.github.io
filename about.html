@@ -24,53 +24,48 @@
             position: relative;
         }
 
-        .navbar {
+     .navbar {
             position: absolute;
             top: 0;
-            left: 0;
+            left: 0; /* Ensures that the navbar starts from the far left */
             width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
+            padding: 20px; /* Apply padding uniformly */
+            box-sizing: border-box; /* Ensures padding is included within the width */
             text-align: right;
         }
 
+
         .navbar a {
-            color: #000;
+            color: #0A0908; /* Or any color that matches your design */
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 16px;
+            margin-left: 20px; /* Space out the navbar items */
+            font-size: 19px; /* Adjust based on your design */
             transition: color 0.3s ease;
         }
 
         .navbar a:hover {
-            color: #ddd;
+            color: #ddd; /* Hover effect color */
         }
 
         .hero-content {
             position: absolute;
-            top: 50%;
-            left: 25%;
-            transform: translateY(-50%);
-            text-align: left;
-            color: #000;
-            max-width: 50%;
-        }
+            top: 35%; /* Center vertically */
+            left: 20%; /* Start a fourth of the way from the left */
+            transform: translateY(-50%); /* Only center vertically */
+            text-align: left; /* Align text to the left */
+            color: #0A0908; /* Text color */
+            max-width: 50%; /* Max width to contain the text in the left half */
+         }
+ 
 
+
+        /* Additional styling for your content */
         .hero-content h1 {
             font-size: 3em;
         }
-
         .hero-content p {
             font-size: 1.2em;
         }
-
-        .about-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 50px 0;
-        }
-
         .about-text {
             flex-basis: 15%;
             margin-left: 15%;
