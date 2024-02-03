@@ -35,65 +35,40 @@
             color: #ddd; /* Hover effect color */
         }
 
-        .hero-content {
-            position: absolute;
-            top: 35%; /* Center vertically */
-            left: 20%; /* Start a fourth of the way from the left */
-            transform: translateY(-50%); /* Only center vertically */
-            text-align: left; /* Align text to the left */
-            color: #0A0908; /* Text color */
-            max-width: 50%; /* Max width to contain the text in the left half */
-         }
+/* Additional global styles */
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-        /* Additional styling for your content */
-        .hero-content h1 {
-            font-size: 3em;
-        }
-        .hero-content p {
-            font-size: 1.2em;
-        }
-
- .about-text {
-            flex-basis: 15%;
-            margin-left: 15%;
-        }
-
-        .about-image {
-            flex-basis: 20%;
-            margin-right: 20%;
-            text-align: right;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-        }
-
+/* Container for the about section */
 .about-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px; /* This should be at least as tall as the image for centering to work */
-    /* Other styles */
+  display: flex;
+  align-items: center; /* This aligns the children vertically in the center */
+  justify-content: center; /* This centers the children horizontally */
+  height: 100vh; /* Full viewport height to center content vertically on the page */
+  text-align: left;
 }
 
+/* Text section within the about section */
 .about-text {
-    flex: 1; /* Takes up the remaining space */
-    padding-right: 2%; /* Creates some space between the text and the image */
+  flex-basis: 60%; /* Adjust the width as necessary, leaving room for the image */
+  padding-right: 2%; /* Optional padding for spacing */
 }
 
+/* Image section within the about section */
 .about-image {
-    flex: 0 0 25%; /* Do not grow, do not shrink, start at 25% of the parent's width */
-    display: flex;
-    justify-content: flex-end; /* Aligns the image to the right */
-    align-items: center; /* Centers the image vertically */
-    height: 100%; /* Full height of the parent container */
+  flex: 0 0 20%; /* Adjust width as necessary for the image */
+  display: flex;
+  justify-content: center; /* Center the image horizontally in its flex item */
+  align-items: center; /* Center the image vertically in its flex item */
 }
 
-
+/* Style for the image itself */
 .about-image img {
-    max-width: 100%; /* Ensure the image is responsive and doesn't exceed its container */
-    height: auto; /* Maintain aspect ratio */
+  width: auto; /* Maintain the aspect ratio of the image */
+  height: 70%; /* Adjust the height as necessary */
+  max-width: 100%; /* Ensure the image is responsive and doesn't exceed its container */
 }
 
     </style>
