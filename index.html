@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
 
-    <style>
-body {
+<style>
+body, html {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  height: 100%;
 }
 
-.topdiv {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 50vh; /* Example height */
-}
-        
 .topnav {
   overflow: hidden;
   background-color: #000;
+  position: relative; /* Make sure navbar is positioned relative to the body */
+  z-index: 10; /* Ensure navbar is above the image */
 }
 
 .topnav a {
@@ -37,31 +33,41 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #808080;
+  background-color: #ddd;
   color: black;
 }
 
 .topnav a.active {
-  background-color: #000000;
+  background-color: #4CAF50;
   color: white;
 }
-    </style>
 
-    <body>
+.fullscreen-bg {
+  position: absolute;
+  top: 50px; /* Adjust based on the actual height of your navbar */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 50px); /* Adjust height to fill screen below navbar */
+  object-fit: cover;
+}
+</style>
+
+<body>
 <div class="topnav">
-<a href=" ">About</a>
-<a href=" ">Blog</a>
-<a href=" ">Research</a>
-<a class="active" href="index.html">Home</a>
+    <a href=" ">About</a>
+    <a href=" ">Blog</a>
+    <a href=" ">Research</a>
+    <a class="active" href="index.html">Home</a>
 </div>
 
-<div class="topdiv">
-  <h1>Avian Genomics</h2> </br>
+<!-- Fullscreen Background Image -->
+<img src="path/to/your/background-image.jpg" alt="Background Image" class="fullscreen-bg">
+
+<div class="content">
+    <h1>Avian Genomics</h1>
+    <p>A blog about birds & bioinformatics</p>
 </div>
 
-<div class="topdiv">
-      <h2>A blog about birds & bioinformatics</h2>
-</div>
-        <script src="" async defer></script>
-    </body>
+<script src="" async defer></script>
+</body>
 </html>
