@@ -18,14 +18,16 @@
             background: url('House Finch.jpeg') no-repeat center center/cover; /* Update with your image path */
         }
 
-        .navbar {
+       .navbar {
             position: absolute;
             top: 0;
+            left: 0; /* Ensures that the navbar starts from the far left */
             width: 100%;
-            padding: 20px 0;
+            padding: 20px; /* Apply padding uniformly */
+            box-sizing: border-box; /* Ensures padding is included within the width */
             text-align: right;
-            padding-right: 100px; /* Adjust based on your design */
         }
+
 
         .navbar a {
             color: #0A0908; /* Or any color that matches your design */
