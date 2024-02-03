@@ -50,11 +50,16 @@ body, html {
   text-align: left;
 }
 
+/* Existing styles for .about-section, body, html, .about-image remain unchanged */
+
 /* Text section within the about section */
 .about-text {
   flex-basis: 60%; /* Adjust the width as necessary, leaving room for the image */
-  padding-right: 2%; /* Optional padding for spacing */
+  align-self: flex-start; /* Aligns the text to the top of the flex container */
+  padding-top: 10vh; /* Adjust the padding to move the text up as desired */
 }
+
+/* You might also need to remove the top padding if it's been added elsewhere */
 
 /* Image section within the about section */
 .about-image {
