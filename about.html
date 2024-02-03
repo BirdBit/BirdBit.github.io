@@ -82,28 +82,57 @@
             height: auto;
         }
 
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.about-text {
+    width: 75%; /* Takes up the left 3/4 of the container */
+    padding-right: 2%; /* Optional padding for spacing */
+    /* Add any additional styling for the text section */
+}
+
+.about-image {
+    width: 25%; /* The image takes up 1/4 of the container */
+    /* Ensure the image container's width doesn't exceed the image's intrinsic width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%; /* Make the image expand to fill its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without stretching the image */
+}
+        
     </style>
 </head>
 <body>
 
 <div class="hero-image snap-section">
     <div class="navbar">
-        <a href="#home">Home</a>
+        <a href="index.html">Home</a>
         <a href="#about">About</a>
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
     </div>
    
 
-<div class="about-section snap-section" id="about">
+<div class="about-section">
     <div class="about-text">
-        <h1>About Me</h1>
-        <p>My name is Jair and I am a master's student in biology.</p>
+        <h2>About Me</h2>
+        <p>Here is some information about me.</p>
+        <!-- Add more text or elements as needed -->
     </div>
     <div class="about-image">
-        <img src="Jair_Photo.JPG" alt="Portrait Image" />
+        <img src="Jair_Photo.JPG" alt="Portrait" />
     </div>
 </div>
+
 
 <!-- Additional sections can be added here -->
 
