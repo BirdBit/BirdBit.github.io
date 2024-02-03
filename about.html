@@ -1,24 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+    <title>My Personal Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Verdana, Arial, sans-serif;
+            scroll-snap-type: y mandatory;
+        }
 
+        .snap-section {
+            height: 100vh;
+            width: 100vw;
+            scroll-snap-align: start;
+        }
 
+        .hero-image {
+            background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
+            position: relative;
+        }
 
-  
-  <body>
-	<script src="index.js"></script>
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: right;
+        }
 
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
 
+        .navbar a:hover {
+            color: #ddd;
+        }
 
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translateY(-50%);
+            text-align: left;
+            color: white;
+            max-width: 50%;
+        }
 
+        .hero-content h1 {
+            font-size: 3em;
+        }
 
+        .hero-content p {
+            font-size: 1.2em;
+        }
 
-    
-  </body>
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0;
+        }
+
+        .about-text {
+            flex-basis: 15%;
+            margin-left: 15%;
+        }
+
+        .about-image {
+            flex-basis: 20%;
+            margin-right: 20%;
+            text-align: right;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="hero-image snap-section">
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="hero-content">
+        <h1>Avian Genomics</h1>
+        <p>A blog about bioinformatics & birds</p>
+        <button>Learn More</button>
+    </div>
+</div>
+
+<div class="about-section snap-section" id="about">
+    <div class="about-text">
+        <h2>About Me</h2>
+        <p>Here is some information about me. I am a passionate individual...</p>
+    </div>
+    <div class="about-image">
+        <img src="path-to-your-portrait.jpg" alt="Portrait Image" />
+    </div>
+</div>
+
+<!-- Additional sections can be added here -->
+
+</body>
 </html>
