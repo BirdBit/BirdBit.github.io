@@ -1,36 +1,57 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Landing Page</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+        .navbar { background: #333; color: #fff; display: flex; justify-content: space-between; padding: 1rem; }
+        .navbar a { color: #fff; text-decoration: none; }
+        .hero { 
+            padding: 2rem; 
+            background: url('your-image-url.jpg') no-repeat center center/cover; 
+            color: #fff; 
+            height: 50vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+        }
+        .about, .contact { padding: 2rem 0; }
+        .footer { background: #333; color: #fff; text-align: center; padding: 1rem; }
+    </style>
+</head>
+<body>
 
-<nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-</nav>
+<div class="navbar">
+    <h1>My Portfolio</h1>
+    <nav>
+        <a href="#about">About</a> | 
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
 
-<section id="home">
-  <h1>Welcome to My Site</h1>
-  <p>This is a minimalist site that focuses on my research, blog posts, and more about me.</p>
-</section>
+<div class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>I'm [Your Name], a [Your Profession].</p>
+</div>
 
-<section id="research">
-  <h2>Research</h2>
-  <p>Here you'll find my latest research projects, papers, and findings on cybersecurity and software development.</p>
-</section>
+<div id="about" class="container">
+    <h2>About Me</h2>
+    <p>I am a [Your Job Title] with [X] years of experience in [Your Field]. Passionate about [A Few Words About Your Passion].</p>
+</div>
 
-<section id="blog">
-  <h2>Blog</h2>
-  <p>Read my latest blog posts on technology trends, programming tips, and personal insights into the tech industry.</p>
-</section>
+<div id="contact" class="container">
+    <h2>Contact</h2>
+    <p>Reach out via email@example.com.</p>
+</div>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>I'm a tech enthusiast with a passion for coding, cybersecurity, and sharing knowledge. Learn more about my journey in tech.</p>
-</section>
+<div class="footer">
+    <p>Footer content &copy; 2024 [Your Name]</p>
+</div>
 
-<footer>
-  <p>Contact me at email@example.com</p>
-</footer>
+</body>
+</html>
