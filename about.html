@@ -86,8 +86,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left;
-    padding: 50px; /* Adjust the padding as needed */
+    min-height: 400px; /* This should be at least as tall as the image for centering to work */
+    /* Other styles */
 }
 
 .about-text {
@@ -96,10 +96,13 @@
 }
 
 .about-image {
-    flex: 0 0 50%; /* Do not grow, do not shrink, start at 25% of the parent's width */
+    flex: 0 0 25%; /* Do not grow, do not shrink, start at 25% of the parent's width */
     display: flex;
     justify-content: flex-end; /* Aligns the image to the right */
+    align-items: center; /* Centers the image vertically */
+    height: 100%; /* Full height of the parent container */
 }
+
 
 .about-image img {
     max-width: 100%; /* Ensure the image is responsive and doesn't exceed its container */
