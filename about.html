@@ -95,58 +95,61 @@ body, html {
   border-radius: 5px; /* Adjust the value as needed for slight rounding */
 }
 
+/* ... existing styles ... */
+
 /* Responsive styles for mobile screens */
 @media (max-width: 480px) {
-  /* Adjust the navbar link size if needed */
-  .navbar a {
-    font-size: 12px; /* Even smaller font size for phone screens */
-  }
-
-  /* Stack the .about-text and .about-image on top of each other */
   .about-section {
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start (left) */
-    justify-content: flex-start; /* Align content to the start (top) */
+    align-items: center; /* Center align the items horizontally */
+    justify-content: center; /* Center align the items vertically */
+    text-align: center;
   }
 
-  /* Set the .about-text styles for mobile */
   .about-text {
-    flex-basis: auto; /* Auto-adjust the width */
-    width: 90%; /* Make the text box narrower to fit the screen */
-    padding: 20px; /* Adjust padding as needed */
-    align-self: center; /* Center the text box */
+    /* Adjust the width and padding to fit the content and center it */
+    width: calc(100% - 40px); /* Subtract the total horizontal padding from the width */
+    padding: 20px;
+    box-sizing: border-box;
     margin: 0; /* Remove any margin */
-    height: auto; /* Adjust the height as necessary */
-    order: 1; /* Ensure the name appears first */
+    order: 2; /* Make the text appear last */
   }
 
-  /* Set the .about-image styles for mobile */
   .about-image {
-    flex-basis: auto; /* Auto-adjust the width */
-    width: 90%; /* Set the width to match the .about-text width */
-    order: 2; /* Ensure the image appears after the name */
-    padding: 0; /* Remove padding */
-    margin-top: 20px; /* Add some space above the image */
+    width: 100%;
+    order: 1; /* Make the image appear after the title */
+    padding: 0;
   }
 
-  /* Set the image styles for mobile */
   .about-image img {
-    width: 100%; /* Make the image fill its container */
-    height: auto; /* Maintain the aspect ratio */
-    max-width: 100%; /* Ensure it doesn't exceed its container */
+    width: 80%; /* Adjust the width of the image as necessary */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+  }
+
+  /* Title styles, assuming you have a separate element for it */
+  .about-title {
+    order: 0; /* The title appears first */
+    /* Additional styling for the title */
   }
 }
 
-/* Styles for tablets */
-@media (max-width: 768px) {
+/* Adjust the navbar for mobile screens */
+@media (max-width: 480px) {
+  .navbar {
+    position: relative; /* Adjust if you want the navbar fixed at the top */
+    padding: 10px;
+    text-align: center;
+  }
+
   .navbar a {
-    font-size: 14px; /* Adjust font size for tablet screens */
+    font-size: 12px; /* Smaller font size for mobile */
+    padding: 5px;
+    margin: 0 5px; /* Space between items */
+    display: inline-block; /* Stack links horizontally */
   }
-
-  /* You can add more tablet-specific styles here if needed */
 }
-
-        
+     
     </style>
 </head>
 
@@ -164,16 +167,14 @@ body, html {
 </div>
 
 <div class="about-section">
-    <div class="about-text">
-        <!-- Your text content goes here -->
+    <div class="about-title">
         <h1>Jair Cortez</h1>
-        <p>I am a master's student who studies bioinformatics and birds. I am interested in how immune genes in avian genomes can explain the susceptibility of birds to disease. My goal is to earn a PhD in computational biology.</p>
-        <!-- More text content -->
     </div>
-    
     <div class="about-image">
-        <!-- Your image goes here -->
         <img src="Jair_Photo_R.JPG" alt="Portrait of Jair" />
+    </div>
+    <div class="about-text">
+        <p>I am a master's student who studies bioinformatics and birds...</p>
     </div>
 </div>
 
