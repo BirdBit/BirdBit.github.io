@@ -41,49 +41,7 @@ body, html {
   margin: 0;
 }
 
-/* Styles for tablets */
-/* ... existing styles ... */
 
-/* Responsive styles for mobile screens */
-@media (max-width: 480px) {
-  /* Assuming .navbar is outside and above .about-section in the HTML structure,
-     it will naturally appear first without needing an order property. */
-
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-title {
-    order: 1;
-  }
-
-  .about-image {
-    order: 2;
-    /* Ensure the image container takes up the width you desire, e.g. 100% */
-    width: 100%;
-    padding: 10px 0; /* Add padding above and below the image */
-  }
-
-  .about-image img {
-    width: 80%; /* Adjust the width of the image as necessary, or 100% if you want it to span the full width */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .about-text {
-    order: 3;
-    /* Adjust the width, padding, and margins as needed */
-    width: 100%;
-  }
-  
-  /* Ensure the navbar links do not bunch together */
-  .navbar a {
-    /* Adjust font size, padding, and margins as needed */
-    font-size: 14px;
-    padding: 5px;
-    margin: 0 5px;
-  }
-}
     </style>
  
 </head>
