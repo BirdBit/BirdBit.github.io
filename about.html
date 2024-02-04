@@ -47,40 +47,36 @@ body, html {
 .about-section {
   display: flex;
   align-items: center; /* Aligns children vertically in the center */
-  justify-content: center; /* Centers children horizontally */
+  justify-content: flex-start; /* Aligns children to the start of the flex container */
   height: 100vh; /* Full viewport height */
   padding: 0; /* No padding */
   background-color: transparent; /* No background color for the entire section */
 }
 
-/* Text section within the about section */
 .about-text {
   background-color: #C6AC8F; /* Dark background color for the text box */
-  color: white; /* Light text color for contrast */
+  color: #000; /* Text color */
   padding: 40px; /* Spacing inside the text box */
-  margin-left: 5%; /* Moves the text box away from the left edge */
-  height: 90vh; /* Takes up almost the entire view height */
+  height: auto; /* Adjust the height as necessary */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centers text vertically inside the box */
   border-radius: 10px; /* Optional rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
-  flex: 0 0 40%; /* Adjust the width as necessary */
+  flex-grow: 1; /* Allows the box to grow to fill the space */
+  margin-right: 2%; /* Adds some space between the text and the image */
 }
 
-/* Image section within the about section */
 .about-image {
   flex: 0 0 20%; /* Adjust width as necessary for the image */
   display: flex;
-  justify-content: center; /* Center the image horizontally in its flex item */
+  justify-content: flex-end; /* Aligns the image to the right */
   align-items: center; /* Center the image vertically in its flex item */
-  padding-left: 5%; /* Adds some space between the text and the image */
 }
 
-/* Style for the image itself */
 .about-image img {
   width: auto; /* Maintain the aspect ratio of the image */
-  height: 80%; /* Adjust the height as necessary */
+  height: 100%; /* Adjust the height as necessary */
   max-width: 100%; /* Ensure the image is responsive and doesn't exceed its container */
 }
 
