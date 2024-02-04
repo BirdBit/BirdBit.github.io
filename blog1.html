@@ -8,15 +8,23 @@
         body, html {
             margin: 0;
             padding: 0;
-            font-family: Verdana, Tahoma, Geneva, Verdana, sans-serif;
+            height: 100%; /* Needed for full-height page */
+            display: flex; /* Flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: #f8f8f8; /* or any background color you prefer */
         }
 
         .container {
             width: 80%;
-            margin: auto;
             max-width: 800px;
+            margin: auto; /* Center in the viewport if content is smaller than viewport height */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for better focus */
+            padding: 40px; /* Optional: padding inside the container */
+            background: #fff; /* Background for content area */
         }
 
         .header {
@@ -66,16 +74,10 @@
     </style>
 </head>
 <body>
-
-<div class="container">
-    <h1 class="header">Why should we study birds?</h1>
-    <p class="sub-header"></p>
-
-    <p>Birds have been prized throughout history for their aesthetic beauty and cultural significance.</p>
-
-    <!-- Additional paragraphs -->
-
-</div>
-
+    <div class="container">
+        <h1 class="header">The Reading Crisis</h1>
+        <p class="sub-header">A blog about bioinformatics & birds</p>
+        <!-- The rest of your content -->
+    </div>
 </body>
 </html>
