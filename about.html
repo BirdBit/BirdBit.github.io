@@ -91,7 +91,7 @@ body, html {
   /* Stack the .about-text and .about-image on top of each other */
   .about-section {
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start (left) */
+    align-items: center; /* Align items to the start (left) */
     justify-content: flex-start; /* Align content to the start (top) */
   }
 
@@ -113,13 +113,18 @@ body, html {
     order: 2; /* Ensure the image appears after the name */
     padding: 0; /* Remove padding */
     margin-top: 20px; /* Add some space above the image */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center;     /* Center children horizontally */
   }
 
   /* Set the image styles for mobile */
   .about-image img {
-    width: 100%; /* Make the image fill its container */
+    width: 90%; /* Make the image fill its container */
     height: auto; /* Maintain the aspect ratio */
     max-width: 100%; /* Ensure it doesn't exceed its container */
+    align: center; 
   }
 }
 
