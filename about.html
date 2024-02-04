@@ -43,30 +43,23 @@ body, html {
 
 /* Container for the about section */
 .about-section {
+  background-color: #22333B;
   display: flex;
-  align-items: center; /* Centers children vertically */
-  justify-content: center; /* Centers children horizontally */
-  height: 100vh; /* Full viewport height */
-  background-color: #22333B; /* Background color of the entire section */
-  padding: 0 4em; /* Optional: adds padding to the left and right */
+  align-items: center; /* This aligns the children vertically in the center */
+  justify-content: center; /* This centers the children horizontally */
+  height: 100vh; /* Full viewport height to center content vertically on the page */
+  text-align: left;
 }
-
 
 /* Existing styles for .about-section, body, html, .about-image remain unchanged */
 
 /* Text section within the about section */
 .about-text {
-  flex-basis: 40%; /* Adjusted width as necessary, leaving room for the image */
-  background-color: #f8f8f8; /* This is the color of the background box */
-  padding: 2em; /* Creates space inside the colored box */
-  margin-left: 15%; /* Space from the left of the section container */
-  margin-top: auto; /* Aligns the text box to the center */
-  margin-bottom: auto; /* Aligns the text box to the center */
-  color: #0A0908; /* Text color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow around the box */
-  border-radius: 10px; /* Optional: rounds the corners of the box */
+  flex-basis: 60%; /* Adjust the width as necessary, leaving room for the image */
+  align-self: flex-start; /* Aligns the text to the top of the flex container */
+  padding-top: 20vh; /* Adjust the padding to move the text up as desired */
+  padding-left: 15vh;
 }
-
 
 /* You might also need to remove the top padding if it's been added elsewhere */
 
@@ -79,11 +72,10 @@ body, html {
 }
 
 /* Style for the image itself */
-.about-image {
-  flex: 0 0 25%; /* Adjust width as necessary for the image */
-  display: flex;
-  justify-content: flex-end; /* Aligns the image to the right */
-  align-items: center; /* Centers the image vertically */
+.about-image img {
+  width: auto; /* Maintain the aspect ratio of the image */
+  height: 60%; /* Adjust the height as necessary */
+  max-width: 60%; /* Ensure the image is responsive and doesn't exceed its container */
 }
 
     </style>
