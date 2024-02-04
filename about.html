@@ -98,36 +98,6 @@ body, html {
     </style>
 </head>
 
-/* Responsive styles for mobile screens */
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column; /* Stack the flex items vertically */
-    align-items: center; /* Center align the items for smaller screens */
-    text-align: center; /* Center the text for smaller screens */
-  }
-
-  .about-text, .about-image {
-    flex-basis: auto; /* Allow the items to auto adjust the width */
-    width: 100%; /* Set the width to full container width */
-    max-width: 100%; /* Ensure the content does not exceed the container's width */
-    margin-left: 0; /* Reset any left margin */
-    margin-right: 0; /* Reset any right margin */
-    padding: 1em; /* Add some padding around the content */
-  }
-
-  .about-text {
-    order: 1; /* "Jair Cortez" comes first */
-  }
-
-  .about-image {
-    order: 2; /* Portrait comes second */
-    padding: 0; /* Remove padding if it's not needed around the image */
-  }
-
-  .about-text p {
-    order: 3; /* Additional text comes last */
-  }
-}
     
 <body>
 
