@@ -95,6 +95,58 @@ body, html {
   border-radius: 5px; /* Adjust the value as needed for slight rounding */
 }
 
+/* Responsive styles for mobile screens */
+@media (max-width: 480px) {
+  /* Adjust the navbar link size if needed */
+  .navbar a {
+    font-size: 12px; /* Even smaller font size for phone screens */
+  }
+
+  /* Stack the .about-text and .about-image on top of each other */
+  .about-section {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    justify-content: flex-start; /* Align content to the start (top) */
+  }
+
+  /* Set the .about-text styles for mobile */
+  .about-text {
+    flex-basis: auto; /* Auto-adjust the width */
+    width: 90%; /* Make the text box narrower to fit the screen */
+    padding: 20px; /* Adjust padding as needed */
+    align-self: center; /* Center the text box */
+    margin: 0; /* Remove any margin */
+    height: auto; /* Adjust the height as necessary */
+    order: 1; /* Ensure the name appears first */
+  }
+
+  /* Set the .about-image styles for mobile */
+  .about-image {
+    flex-basis: auto; /* Auto-adjust the width */
+    width: 90%; /* Set the width to match the .about-text width */
+    order: 2; /* Ensure the image appears after the name */
+    padding: 0; /* Remove padding */
+    margin-top: 20px; /* Add some space above the image */
+  }
+
+  /* Set the image styles for mobile */
+  .about-image img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed its container */
+  }
+}
+
+/* Styles for tablets */
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 14px; /* Adjust font size for tablet screens */
+  }
+
+  /* You can add more tablet-specific styles here if needed */
+}
+
+        
     </style>
 </head>
 
