@@ -38,6 +38,26 @@
             transition: color 0.3s ease;
         }
 
+        /* Default styles for larger screens */
+
+
+/* Styles for tablets */
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 16px; /* Slightly smaller font size for tablet screens */
+    /* other adjustments */
+  }
+}
+
+/* Styles for phones */
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: 14px; /* Even smaller font size for phone screens */
+    /* other adjustments */
+  }
+}
+
+        
         .navbar a:hover {
             color: #ddd; /* Hover effect color */
         }
