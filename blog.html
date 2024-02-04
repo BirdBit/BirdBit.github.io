@@ -44,16 +44,15 @@
         }
 
         .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #0A0908;
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+          position: absolute;
+          top: 50%;
+          right: 0; /* Align to the right edge of the viewport */
+          transform: translateY(-50%); /* Center vertically only */
+          width: 50vw; /* Take up half the viewport width */
+          padding: 20px; /* Add some padding inside the container */
+          box-sizing: border-box; /* Include padding in the width */
+          text-align: left; /* Align text to the left within the hero content */
+}
 
         .hero-content h1 {
             margin-bottom: 0.5em; /* Space below the heading */
@@ -63,27 +62,29 @@
             margin-bottom: 1em; /* Space below the paragraph */
         }
 
-        .post-buttons-container {
-            overflow-y: auto;
-            max-height: calc(100vh - 180px); /* Adjust based on the space taken by the heading and paragraph */
+      .post-buttons-container {
+          overflow-y: auto; /* Allow vertical scrolling */
+          max-height: calc(100vh - 40px); /* Adjust height to prevent overflow, subtracting top and bottom padding */
+          margin-top: 20px; /* Space below the title and paragraph */
         }
 
+
+        /* Ensure the post buttons don't exceed the hero content width */
         .post-button {
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            margin: 10px auto; /* Centers the button */
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            width: 80%; /* Button width */
+              display: block; /* Each button is full-width block element */
+              background-color: #333; /* Button background color */
+              color: #fff; /* Button text color */
+              text-decoration: none;
+              margin: 10px 0; /* Margin above and below each button */
+              padding: 10px;
+              border-radius: 5px; /* Rounded corners for aesthetics */
+              transition: background-color 0.3s; /* Smooth transition for hover effect */
+              width: calc(100% - 20px); /* Full width minus padding */
         }
 
-        .post-button:hover {
-            background-color: #444;
-        }
-
+.post-button:hover {
+  background-color: #444; /* Darken button on hover */
+}
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .navbar a {
