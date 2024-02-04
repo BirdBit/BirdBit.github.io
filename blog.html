@@ -3,123 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avian Genomics | Birds & Blogs </title>
+    <title>Avian Genomics | Birds & Blogs</title>
     <style>
         body, html {
-          width: 100%;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-          overflow-x: hidden; /* Prevents horizontal scroll */
-          font-family: Verdana, Arial, sans-serif;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevents horizontal scroll */
+            font-family: Verdana, Arial, sans-serif;
         }
 
         .hero-image {
             position: relative;
-            height: 100%; /* Full height */
-            min-height: 100vh; /* Minimum height to cover the full viewport height */
+            height: 100vh; /* Full height */
             background: url('Pine Siskin.jpeg') no-repeat center center;
             background-size: cover; /* Ensures the image covers the entire element */
-            width: 100vw; /* Ensures the width is 100% of the viewport width */
         }
         
-       .navbar {
+        .navbar {
             position: absolute;
             top: 0;
-            left: 0; /* Ensures that the navbar starts from the far left */
+            left: 0;
             width: 100%;
-            padding: 20px; /* Apply padding uniformly */
-            box-sizing: border-box; /* Ensures padding is included within the width */
+            padding: 20px;
+            box-sizing: border-box;
             text-align: right;
         }
 
-
         .navbar a {
-            color: #0A0908; /* Or any color that matches your design */
+            color: #0A0908;
             text-decoration: none;
-            margin-left: 20px; /* Space out the navbar items */
-            font-size: 19px; /* Adjust based on your design */
+            margin-left: 20px;
+            font-size: 19px;
             transition: color 0.3s ease;
         }
 
-        /* Default styles for larger screens */
-
-        .blog-container {
-  position: relative;
-}
-
-.static-background {
-  background: url('path-to-your-bird-image.jpg') no-repeat center center/cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Ensures the image stays in the background */
-}
-
-.post-buttons-container {
-  position: relative;
-  z-index: 1; /* Ensures the buttons are scrollable and above the static image */
-  overflow-y: auto; /* Allows scrolling */
-  height: 100vh; /* Adjust the height as needed for your design */
-  padding-right: 20px; /* Provides space for the scrollbar */
-}
-
-.post-button {
-  display: block; /* Each link is a block for full-width click area */
-  background-color: #333; /* Button background color */
-  color: #fff; /* Button text color */
-  text-decoration: none;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px; /* Optional: rounded corners */
-  transition: background-color 0.3s; /* Smooth background color transition */
-}
-
-.post-button:hover {
-  background-color: #444; /* Button hover state color */
-}
-
-/* Styles for tablets */
-@media (max-width: 768px) {
-  .navbar a {
-    font-size: 14px; /* Slightly smaller font size for tablet screens */
-    /* other adjustments */
-  }
-}
-
-/* Styles for phones */
-@media (max-width: 480px) {
-  .navbar a {
-    font-size: 14px; /* Slightly smaller font size for phone screens */
-    /* other adjustments */
-  }
-}
-
-        
         .navbar a:hover {
-            color: #ddd; /* Hover effect color */
+            color: #ddd;
         }
 
         .hero-content {
             position: absolute;
-            top: 35%; /* Center vertically */
-            right: 20%; /* Start a fourth of the way from the left */
-            transform: translateY(-50%); /* Only center vertically */
-            text-align: left; /* Align text to the left */
-            color: #0A0908; /* Text color */
-            max-width: 50%; /* Max width to contain the text in the left half */
-         }
- 
-
-
-        /* Additional styling for your content */
-        .hero-content h1 {
-            font-size: 3em;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #0A0908;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
         }
+
+        .hero-content h1 {
+            margin-bottom: 0.5em; /* Space below the heading */
+        }
+
         .hero-content p {
-            font-size: 1.2em;
+            margin-bottom: 1em; /* Space below the paragraph */
+        }
+
+        .post-buttons-container {
+            overflow-y: auto;
+            max-height: calc(100vh - 180px); /* Adjust based on the space taken by the heading and paragraph */
+        }
+
+        .post-button {
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 10px auto; /* Centers the button */
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 80%; /* Button width */
+        }
+
+        .post-button:hover {
+            background-color: #444;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar a {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar a {
+                font-size: 14px;
+            }
+
+            .hero-content {
+                top: 20%; /* Adjust as needed */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                padding-top: 60px; /* Gives space for the fixed navbar if needed */
+            }
         }
     </style>
 </head>
@@ -133,24 +116,14 @@
         <a href="#contact">Projects</a>
         <a href="about.html">About</a>
     </div>
-    
     <div class="hero-content">
         <h1>Blog Posts</h1>
         <p>A blog about bioinformatics & birds</p>
-          <div class="blog-container">
-          <div class="static-background"></div> <!-- Static background image container -->
-          <div class="post-buttons-container">
-          <!-- Scrollable container for post buttons -->
-          <a href="post-url-1" class="post-button">Post Title 1</a>
-          <a href="post-url-2" class="post-button">Post Title 2</a>
-    <!-- more post buttons -->
-  </div>
-</div>
-
-    </div>
- </div>
-
-        <!-- Button styles should be defined within your CSS -->
+        <div class="post-buttons-container">
+            <a href="post-url-1" class="post-button">Post Title 1</a>
+            <a href="post-url-2" class="post-button">Post Title 2</a>
+            <!-- Additional blog post buttons -->
+        </div>
     </div>
 </div>
 
