@@ -43,16 +43,18 @@
             color: #ddd;
         }
 
-      .hero-content {
+  
+
+        .hero-content {
           position: absolute;
           top: 30%;
-          width: calc(70% - 20px); /* Adjust the width to be 70% of the viewport width minus any desired padding */
-          padding: 10px; /* Add padding if needed */
-          box-sizing: border-box; /* Include padding in the width calculation */
+          right: 0; /* Align to the right edge of the viewport */
+          transform: translateY(-50%); /* Center vertically only */
+          width: 30%; /* Take up 30% of the viewport width */
+          box-sizing: border-box; /* Include padding in the width */
           text-align: left; /* Align text to the left within the hero content */
-          right: 30%; /* Position the element 30% from the right edge of the viewport */
+          padding: 20px; /* Add some padding inside the container */
         }
-
 
         .hero-content h1 {
             margin-bottom: 0.5em; /* Space below the heading */
