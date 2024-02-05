@@ -137,6 +137,13 @@ body, html {
   }
 }
 
+/* Styles for landscape-oriented mobile screens */
+@media (max-width: 768px) and (orientation: landscape) {
+  /* Adjust the flex direction to keep the portrait and text in line */
+  .about-section {
+    flex-direction: row;
+  }
+    
 /* Styles for tablets */
 @media (max-width: 768px) {
   .navbar a {
