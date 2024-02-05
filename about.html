@@ -87,7 +87,6 @@ body, html {
         /* ... existing styles ... */
 
 /* Responsive styles for mobile screens */
-/* Responsive styles for mobile screens */
 @media (max-width: 480px) {
   /* Adjust the navbar link size if needed */
   .navbar a {
@@ -139,77 +138,18 @@ body, html {
   }
 }
 
+
+/* Styles for landscape-oriented mobile screens */
 @media (max-width: 768px) and (orientation: landscape) {
+  /* Adjust the flex direction to keep the portrait and text in line */
   .about-section {
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-  }
+    flex-direction: column;
 
-  .about-text, .about-image {
-    width: 80%; /* Adjust width for better spacing */
-    text-align: center; /* Center text for better readability */
-  }
 
-  .about-text {
-    order: 1; /* Text comes first */
-    padding-top: 0; /* Remove top padding if previously set */
-  }
-
-  .about-image {
-    order: 2; /* Image comes after the text */
-    margin-top: 20px; /* Space between text and image */
-  }
-
-  /* Ensuring title (h1) is at the top */
-  .about-text h1 {
-    margin-top: 0; /* Adjust as needed */
-  }
+  /* You can add more tablet-specific styles here if needed */
 }
 
-/* Ensure the navbar is fixed at the top */
-.navbar {
-  position: fixed; /* Changed from absolute to fixed */
-  z-index: 1000; /* High z-index to ensure it's above other content */
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: right;
-  background-color: #EAE0D5; /* Match the background color of your page or make it transparent */
-}
-
-/* Additional styles to prevent content from hiding under the fixed navbar */
-body {
-  padding-top: 60px; /* Adjust this value so that content starts below the navbar */
-}
-
-/* Adjustments for landscape mode */
-@media screen and (orientation: landscape) {
-  .about-section {
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    padding-top: 60px; /* Add padding to account for the fixed navbar */
-  }
-
-  .about-text {
-    width: 100%; /* Adjust width as necessary */
-    text-align: center; /* Center the text */
-    order: 2; /* Text comes after the title */
-  }
-
-  .about-image {
-    width: 100%; /* Adjust width as necessary */
-    order: 1; /* Image comes first */
-    padding: 20px 0; /* Add some vertical spacing */
-  }
-
-  .about-image img {
-    width: 100%; /* Image should not exceed its container */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 50vh; /* Limit the height to 50% of the viewport height */
-  }
-}
-
+        
     </style>
 </head>
 <body>
@@ -241,4 +181,3 @@ body {
 
 </body>
 </html>
-
