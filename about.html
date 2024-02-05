@@ -139,26 +139,34 @@ body, html {
   }
 }
 
-/* Styles for landscape-oriented mobile screens (e.g., iPhone landscape) */
-@media (max-width: 568px) and (orientation: landscape) {
-  /* Reverse the order of title and text/image */
-  .about-text {
-    order: 2; /* Make text/image appear after the title */
-  }
-  .about-image {
-    order: 1; /* Make title appear before text/image */
-  }
-}
-
-/* Styles for landscape-oriented mobile screens */
 @media (max-width: 768px) and (orientation: landscape) {
-  /* Adjust the flex direction to keep the portrait and text in line */
   .about-section {
-    flex-direction: column;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+  }
 
+  .about-text, .about-image {
+    width: 80%; /* Adjust width for better spacing */
+    text-align: center; /* Center text for better readability */
+  }
 
-  /* You can add more tablet-specific styles here if needed */
+  .about-text {
+    order: 1; /* Text comes first */
+    padding-top: 0; /* Remove top padding if previously set */
+  }
+
+  .about-image {
+    order: 2; /* Image comes after the text */
+    margin-top: 20px; /* Space between text and image */
+  }
+
+  /* Ensuring title (h1) is at the top */
+  .about-text h1 {
+    margin-top: 0; /* Adjust as needed */
+  }
 }
+
 
         
     </style>
