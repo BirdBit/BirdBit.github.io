@@ -87,6 +87,7 @@ body, html {
         /* ... existing styles ... */
 
 /* Responsive styles for mobile screens */
+/* Responsive styles for mobile screens */
 @media (max-width: 480px) {
   /* Adjust the navbar link size if needed */
   .navbar a {
@@ -137,14 +138,17 @@ body, html {
     align: center; 
   }
 }
-@media (max-width: 480px) and (orientation: landscape) {
-  /* Adjust the flex direction to keep the portrait and text in line */
-  .about-section {
-    flex-direction: column;
-      
-  .navbar a {
-    font-size: 14px; /* Adjust font size for tablet screens */
+
+/* Styles for landscape-oriented mobile screens (e.g., iPhone landscape) */
+@media (max-width: 568px) and (orientation: landscape) {
+  /* Reverse the order of title and text/image */
+  .about-text {
+    order: 2; /* Make text/image appear after the title */
   }
+  .about-image {
+    order: 1; /* Make title appear before text/image */
+  }
+}
 
 /* Styles for landscape-oriented mobile screens */
 @media (max-width: 768px) and (orientation: landscape) {
