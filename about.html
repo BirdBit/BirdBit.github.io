@@ -91,6 +91,7 @@ body, html {
   /* Adjust the navbar link size if needed */
   .navbar a {
     font-size: 12px; /* Even smaller font size for phone screens */
+  }
 
   /* Stack the .about-text and .about-image on top of each other */
   .about-section {
@@ -137,18 +138,19 @@ body, html {
   }
 }
 
+/* Styles for tablets */
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 14px; /* Adjust font size for tablet screens */
+
+  }
+
 /* Styles for landscape-oriented mobile screens */
 @media (max-width: 768px) and (orientation: landscape) {
   /* Adjust the flex direction to keep the portrait and text in line */
   .about-section {
     flex-direction: row;
-  }
-    
-/* Styles for tablets */
-@media (max-width: 768px) {
-  .navbar a {
-    font-size: 14px; /* Adjust font size for tablet screens */
-  }
+
 
   /* You can add more tablet-specific styles here if needed */
 }
@@ -185,3 +187,4 @@ body, html {
 
 </body>
 </html>
+
