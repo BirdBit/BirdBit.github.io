@@ -137,12 +137,13 @@ body, html {
     align: center; 
   }
 }
-
-/* Styles for tablets */
-@media (max-width: 768px) {
+@media (max-width: 480px) and (orientation: landscape) {
+  /* Adjust the flex direction to keep the portrait and text in line */
+  .about-section {
+    flex-direction: column;
+      
   .navbar a {
     font-size: 14px; /* Adjust font size for tablet screens */
-
   }
 
 /* Styles for landscape-oriented mobile screens */
