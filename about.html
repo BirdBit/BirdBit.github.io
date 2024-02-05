@@ -167,6 +167,36 @@ body, html {
   }
 }
 
+@media screen and (orientation: landscape) {
+  /* Ensure the flex container (.about-section) stacks items vertically */
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Assign order to title, image, and text */
+  .about-text h1 {
+    order: 1; /* Title first */
+  }
+
+  .about-image {
+    order: 2; /* Image second */
+    width: 100%; /* Adjust width as needed */
+    padding: 20px 0; /* Add some vertical spacing */
+  }
+
+  .about-text {
+    order: 3; /* Text last */
+    width: 100%; /* Adjust width as needed */
+  }
+
+  /* Adjust the image size if needed */
+  .about-image img {
+    width: 80%; /* Adjust width as needed */
+    max-width: 100%; /* Ensure it doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
 
         
     </style>
