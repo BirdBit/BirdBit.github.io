@@ -2627,7 +2627,25 @@ input, select, textarea {
 		top: 0;
 		width: 35%;
 	}
+#header .inner {
+            text-align: center; /* Centers the content horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers the content vertically if the parent has a defined height */
+            height: 100%; /* Optional: Adjust based on your layout needs */
+        }
 
+        .image.avatar {
+            display: inline-block; /* Keeps the avatar size according to its content */
+            margin: 0 auto; /* Additional centering for the image */
+        }
+
+        .image.avatar img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
 		#header > * {
 			-moz-flex-shrink: 0;
 			-webkit-flex-shrink: 0;
