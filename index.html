@@ -2022,9 +2022,11 @@ input, select, textarea {
 		position: relative;
 		display: flex;            /* Use Flexbox */
     		justify-content: center;  /* Center items horizontally */
-   		 flex-wrap: wrap;          /* Allow items to wrap */
-   		 list-style: none;         /* Remove default list styling */
-   		 padding: 0;               /* Remove default padding */
+   		flex-wrap: wrap;          /* Allow items to wrap */
+   		list-style: none;         /* Remove default list styling */
+   		padding: 0;               /* Remove default padding */
+
+		
 	}
 
 		.icon:before {
@@ -2670,10 +2672,12 @@ input, select, textarea {
 }
 
 /* Footer */
-
+		
 	#footer .icons {
-		margin: 1em 0 0 0;
-	}
+         display: flex;
+         justify-content: center;
+         margin: 1em 0 0 0;
+}
 
 		#footer .icons a {
 			color: rgba(255, 255, 255, 0.4);
