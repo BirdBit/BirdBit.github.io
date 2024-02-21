@@ -2120,6 +2120,7 @@ input, select, textarea {
 			display: block;
 		}
 
+
 		.image.left {
 			float: left;
 			margin: 0 1.5em 1em 0;
@@ -2151,7 +2152,7 @@ input, select, textarea {
 			}
 
 		.image.avatar {
-			border-radius: 50%;
+			border-radius: 100%;
 		}
 
 			.image.avatar:before {
@@ -2159,8 +2160,11 @@ input, select, textarea {
 			}
 
 			.image.avatar img {
-				border-radius: 100%;
-				width: 100%;
+            border-radius: 50%; /* Makes the image round */
+            width: 150px; /* Set a fixed width */
+            height: 150px; /* Set a fixed height, equal to the width to maintain aspect ratio */
+            object-fit: cover; /* Ensures the image covers the area without stretching. */
+        }
 			}
 
 /* List */
