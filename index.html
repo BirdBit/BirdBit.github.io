@@ -2158,10 +2158,10 @@ input, select, textarea {
 
 			.image.avatar img {
                          	 border-radius: 50%; /* Makes the image round */
-           			 width: 175px; /* Set a fixed width */
-           			 height: 175px; /* Set a fixed height, equal to the width to maintain aspect ratio */
+           			 width: 165px; /* Set a fixed width */
+           			 height: 165px; /* Set a fixed height, equal to the width to maintain aspect ratio */
             			 object-fit: cover; /* Ensures the image covers the area without stretching. */
-				 padding-right: 5%;
+
     		    }
 	
 /* List */
@@ -2657,9 +2657,11 @@ input, select, textarea {
 		}
 
 		#header .image.avatar {
-			margin: 0 0 1.2em 0;
-			width: 6.25em;
-		}
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  		width: 100%; /* Take the full width of its parent to align the text below */
+}
 
 /* Footer */
 
