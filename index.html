@@ -11,13 +11,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"> 
-
+	        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style>
 
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
-		
+ .navbar {
+        background-color: transparent !important;
+        box-shadow: none;
+    }
+    #navbarNav {
+        width: 100%;
+    }
+    .navbar-nav {
+        justify-content: flex-end; /* Aligns menu items to the right */
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem; /* Adds space between items */
+    }
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.25rem; /* Increases text size */
+        text-align: right; /* Aligns text to the right */
+        padding: 0.5rem 0; /* Adjusts padding for spacing, remove or adjust as needed */
+        border: none; /* Removes borders */
+    }
+    .navbar-nav .nav-item:last-child {
+        margin-bottom: 0; /* Removes extra margin from the last item */
+    }		
 		
 /*
 	Strata by HTML5 UP
@@ -3304,7 +3325,26 @@ input, select, textarea {
 		
 	</head>
 	<body class="is-preload">
-
+  <!-- Navbar -->
+  <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
 
 		<!-- Header -->
 			<header id="header" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
